@@ -81,7 +81,7 @@ def read_op(s, regex):
             continue
         return s, regex, op
 
-def list_interactive(data):
+def interactive_list(data):
     if type(data) != dict:
         raise TypeError('Function requires dictionary argument')
     results = [[i for i in data]]

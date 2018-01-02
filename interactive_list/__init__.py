@@ -1,1 +1,1 @@
-from .interactive_list import list_interactive
+from .interactive_list import interactive_list
