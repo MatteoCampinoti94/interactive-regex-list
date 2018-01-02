@@ -93,7 +93,7 @@ def interactive_list(data):
     while True:
         l = len(results[-1])
         cols, rows = os.get_terminal_size()
-        if l > rows - 3: l = rows - 4
+        if l > rows - 4: l = rows - 4
 
         for i in results[-1][pos:pos+l]:
             el = regex.sub("\033[1m\g<0>\033[0m", data[i])
