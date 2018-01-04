@@ -46,7 +46,7 @@ def regex_comp(s):
 def read_op(s, regex):
     so = s
     op = 0
-    
+
     while True:
         c = read_fn()
 
@@ -85,6 +85,9 @@ def read_op(s, regex):
 def interactive_list(data):
     if type(data) != dict:
         raise TypeError('Function requires dictionary argument')
+    for i in data:
+        if type(data[i]) != str:
+            raise TypeError('Function requires dictionary of string elements')
     results = [[i for i in data]]
     s = ''
     regex = regex_comp(s)
